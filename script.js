@@ -50,14 +50,15 @@ window.addEventListener('scroll', () => {
 const animateCounter = (element, target, duration = 2000) => {
     let start = 0;
     const increment = target / (duration / 16); // 60fps
+    const isPercentage = element.nextElementSibling.textContent.includes('%');
     
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
-            element.textContent = target + (element.nextElementSibling.textContent.includes('%') ? '' : '+');
+            element.textContent = target + (isPercentage ? '' : '+');
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(start) + (element.nextElementSibling.textContent.includes('%') ? '' : '+');
+            element.textContent = Math.floor(start) + (isPercentage ? '' : '+');
         }
     }, 16);
 };
@@ -122,8 +123,13 @@ contactForm.addEventListener('submit', (e) => {
     console.log('Form submitted:', { name, email, service, message });
 });
 
-// Add active class to nav links based on scroll position
-window.addEventListener('scroll', () => {
+// Combined scroll handler with throttling for better performance
+let ticking = false;
+
+const handleScroll = () => {
+    const scrolled = window.pageYOffset;
+    
+    // Update active nav link based on scroll position
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -133,7 +139,7 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         
-        if (window.pageYOffset >= sectionTop - 200) {
+        if (scrolled >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
@@ -144,11 +150,8 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
+    
+    // Parallax effect for hero section
     const hero = document.querySelector('.hero');
     
     if (hero && scrolled < hero.offsetHeight) {
@@ -157,6 +160,15 @@ window.addEventListener('scroll', () => {
             const speed = 0.5 + (index * 0.1);
             card.style.transform = `translateY(${scrolled * speed}px)`;
         });
+    }
+    
+    ticking = false;
+};
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
     }
 });
 
