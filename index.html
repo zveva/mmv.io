@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MMV - Marketing agency specializing in digital marketing, social media management, and mental support for aspiring marketers">
+    <title>MMV - Your Marketing & Mental Wellness Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>MMV</h1>
+                    <span class="logo-tagline">Marketing & Mindset</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link cta-button">Get Started</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Grow Your Brand,<br>
+                        <span class="gradient-text">Nurture Your Mind</span>
+                    </h1>
+                    <p class="hero-description">
+                        We're not just another marketing agency. We combine cutting-edge digital marketing strategies 
+                        with mental wellness support to help you succeed in your marketing journey—both professionally and personally.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                        <a href="#services" class="btn btn-secondary">Explore Services</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">📈</div>
+                        <h4>Growth Focused</h4>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🧠</div>
+                        <h4>Mental Support</h4>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">✨</div>
+                        <h4>Creative Strategy</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive solutions to elevate your marketing game</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="30" fill="#667eea" opacity="0.1"/>
+                            <path d="M30 15L35 25H25L30 15Z M30 35L25 45H35L30 35Z M20 30L15 25L20 20V30Z M40 30V20L45 25L40 30Z" fill="#667eea"/>
+                        </svg>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic campaigns that drive results. From SEO to paid advertising, we help you reach your target audience effectively and maximize ROI.</p>
+                    <ul class="service-features">
+                        <li>SEO Optimization</li>
+                        <li>PPC Campaigns</li>
+                        <li>Email Marketing</li>
+                        <li>Content Strategy</li>
+                    </ul>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="30" fill="#764ba2" opacity="0.1"/>
+                            <path d="M30 20C25 20 20 23 20 28C20 32 23 35 27 36V40H33V36C37 35 40 32 40 28C40 23 35 20 30 20Z M25 25H35V31H25V25Z" fill="#764ba2"/>
+                        </svg>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Build a thriving online community. We create engaging content, manage your presence, and turn followers into loyal customers across all platforms.</p>
+                    <ul class="service-features">
+                        <li>Content Creation</li>
+                        <li>Community Management</li>
+                        <li>Analytics & Reporting</li>
+                        <li>Influencer Partnerships</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="30" fill="#f093fb" opacity="0.1"/>
+                            <path d="M30 15C22 15 15 22 15 30C15 38 22 45 30 45C38 45 45 38 45 30C45 22 38 15 30 15Z M28 35L22 29L24 27L28 31L36 23L38 25L28 35Z" fill="#f093fb"/>
+                        </svg>
+                    </div>
+                    <h3>Mental Support & Coaching</h3>
+                    <p>Your success starts from within. We provide personalized mentorship, motivation, and mental wellness support for aspiring marketers starting their journey.</p>
+                    <ul class="service-features">
+                        <li>One-on-One Coaching</li>
+                        <li>Career Guidance</li>
+                        <li>Stress Management</li>
+                        <li>Motivation & Accountability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Why Choose MMV?</h2>
+                    <p class="about-description">
+                        We believe that true success in marketing isn't just about numbers and metrics—it's about sustainable growth, 
+                        creativity, and personal well-being. That's what sets us apart.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-content">
+                                <h4>Results-Driven Approach</h4>
+                                <p>We focus on strategies that deliver measurable outcomes and real business growth.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">💡</div>
+                            <div class="feature-content">
+                                <h4>Creative Innovation</h4>
+                                <p>Fresh ideas and cutting-edge tactics that make your brand stand out from the crowd.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🤝</div>
+                            <div class="feature-content">
+                                <h4>Holistic Support</h4>
+                                <p>We care about your mental well-being as much as your marketing success.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🚀</div>
+                            <div class="feature-content">
+                                <h4>Growth Partnership</h4>
+                                <p>We're not just service providers—we're your partners in long-term success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="500">0</h3>
+                        <p class="stat-label">Happy Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="1000">0</h3>
+                        <p class="stat-label">Campaigns Launched</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="95">0</h3>
+                        <p class="stat-label">Success Rate %</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="24">0</h3>
+                        <p class="stat-label">7 Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Ready to Transform Your Marketing?</h2>
+                    <p class="contact-description">
+                        Whether you're looking to scale your business or just starting your marketing journey, 
+                        we're here to support you every step of the way.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>hello@mmv.io</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div>
+                                <h4>Live Chat</h4>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Remote & Global</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="digital">Digital Marketing</option>
+                                <option value="social">Social Media Management</option>
+                                <option value="mental">Mental Support & Coaching</option>
+                                <option value="all">All Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Tell us about your needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MMV</h3>
+                    <p>Marketing & Mindset Excellence</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">f</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MMV. All rights reserved. Built with passion and purpose.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
