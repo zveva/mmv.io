@@ -1,3 +1,10 @@
+// Polyfill for requestAnimationFrame
+window.requestAnimationFrame = window.requestAnimationFrame || 
+                               window.mozRequestAnimationFrame || 
+                               window.webkitRequestAnimationFrame || 
+                               window.msRequestAnimationFrame || 
+                               function(callback) { return setTimeout(callback, 1000 / 60); };
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -50,15 +57,15 @@ window.addEventListener('scroll', () => {
 const animateCounter = (element, target, duration = 2000) => {
     let start = 0;
     const increment = target / (duration / 16); // 60fps
-    const isPercentage = element.nextElementSibling.textContent.includes('%');
+    const suffix = element.getAttribute('data-suffix') || '';
     
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
-            element.textContent = target + (isPercentage ? '' : '+');
+            element.textContent = target + suffix;
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(start) + (isPercentage ? '' : '+');
+            element.textContent = Math.floor(start) + suffix;
         }
     }, 16);
 };
